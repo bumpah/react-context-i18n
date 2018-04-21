@@ -1,0 +1,4 @@
+node_modules
+lib
+.depc
+yarn-error.log

@@ -1,0 +1,69 @@
+{
+  "name": "react-translate",
+  "version": "0.0.1",
+  "description": "Translate your React APP with with use of new Context API ^^",
+  "main": "lib/react-translate.js",
+  "author": "bumpah",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "resolution": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "@babel/preset-stage-3": "^7.0.0-beta.44",
+    "@babel/preset-typescript": "^7.0.0-beta.44",
+    "@storybook/addon-actions": "^4.0.0-alpha.3",
+    "@storybook/addon-links": "^4.0.0-alpha.3",
+    "@storybook/addons": "^4.0.0-alpha.3",
+    "@storybook/react": "^4.0.0-alpha.3",
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.12",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/storybook__react": "^3.0.7",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch --runInBand",
+    "type-check": "tsc --noEmit --pretty",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "build": "babel src/index.tsx -o lib/react-translate.js  --extensions '.ts,.tsx'",
+    "watch": "babel src/index.tsx -o lib/react-translate.js -w --extensions '.ts,.tsx'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      ".(ts|tsx)": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "modulePaths": [
+      "<rootDir>/node_modules",
+      "<rootDir>/src"
+    ],
+    "testRegex": "/__tests__/.*\\.(js|jsx|ts|tsx)$"
+  },
+  "dependencies": {}
+}
