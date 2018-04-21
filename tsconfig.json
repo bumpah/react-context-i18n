@@ -7,7 +7,7 @@
     "jsx": "react",
     "lib": ["dom", "es2015", "es2016", "es2017"],
     "listEmittedFiles": true,
-    "module": "es2015",
+    "module": "es6",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noEmit": true,
@@ -16,7 +16,7 @@
     "removeComments": false,
     "rootDir": "src",
     "skipLibCheck": true,
-    "target": "es2015"
+    "target": "es6"
   },
   "include": ["typings/*.d.ts","./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["node_modules", "dist", "data"]

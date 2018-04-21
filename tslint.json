@@ -3,6 +3,9 @@
   "rules": {
     "max-classes-per-file": [false],
     "semicolon": false,
-    "quotemark": [true, "single", "jsx-double"]
+    "quotemark": [true, "single", "jsx-double"],
+    "interface-name": false,
+    "jsx-no-multiline-js": false,
+    "object-literal-sort-keys": false
   }
 }

@@ -1,6 +1,11 @@
 const path = require("path")
 
 module.exports = (baseConfig, env) => {
+
+  baseConfig.resolve = {
+    extensions: ['.js', '.ts', '.tsx']
+  }
+
   baseConfig.module = {
     rules: [
       {
@@ -17,5 +22,6 @@ module.exports = (baseConfig, env) => {
       },
     ],
   }
+  
   return baseConfig
 }

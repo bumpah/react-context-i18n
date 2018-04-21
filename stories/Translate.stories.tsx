@@ -4,16 +4,19 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { storiesOf } from '@storybook/react';
 
-import { Button, Welcome } from '@storybook/react/demo';
+import Trans from '../src'
+import withProvide from '../src/Provider'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import getJson from '../translations'
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+const Wrapper = () => (
+  <div>
+    <Trans text="name" />
+  </div>
+)
+const Comp = withProvide(getJson('fi'))(Wrapper)
+
+storiesOf('Translation', module)
+  .add('No translation {text=name}', () => <Trans text="name" />)
+  .add('Translate to Finnish {text=name}', () => <Comp />)
+  
