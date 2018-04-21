@@ -2,12 +2,14 @@
   "default": {
     "name": "nimi",
     "car": "auto",
-    "cars": "autot"
+    "cars": "autot",
+    "name ${username}": "nimi ${username}"
   },
   "reservation": {
-    "name": "reservation",
+    "name": "varauksen nimi",
     "my car": "autoni",
-    "my cars": "autoni"
+    "my cars": "autojani",
+    "name ${username}": "nimi ${username} varaus"
   },
   "payment": {
     "car": "autolle",

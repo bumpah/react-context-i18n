@@ -19,4 +19,3 @@ const Comp = withProvide(getJson('fi'))(Wrapper)
 storiesOf('Translation', module)
   .add('No translation {text=name}', () => <Trans text="name" />)
   .add('Translate to Finnish {text=name}', () => <Comp />)
-  

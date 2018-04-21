@@ -3,8 +3,17 @@ import { I18 } from './Context'
 
 interface Props {
   text?: string
+  t?: string
+  s?: string,
+  p?: string,
+  pre?: string
+  suf?: string
   children?: string
   context?: string
+  count?: number
+  vars?: Array<string|number> | object
+  variables?: Array<string|number> | object
+  plural?: string[]
 }
 
 interface Context {
@@ -12,6 +21,11 @@ interface Context {
 }
 
 class ReactTranslate extends React.Component<Props> {
+  protected static defaultProps = {
+    vars: null,
+    variables: null,
+  }
+
   public state = {
     catched: false,
   }
@@ -20,16 +34,34 @@ class ReactTranslate extends React.Component<Props> {
     if ( this.state.catched ) {
       return null
     }
-    const text: string = this.props.text || this.props.children
+    let text: string = this.props.text || this.props.children
     const context = this.props.context || 'default'
+
+    const { vars } = this.props
+
+    const pre = this.props.p || this.props.pre || ''
+    const suf = this.props.s || this.props.suf || ''
+    if ( this.props.plural ) {
+      text = this.props.plural[this.props.count]
+    }
     return (
       <I18.Consumer>
         { (trans: Context) => {
           const { translations } = trans
-          const toPrint = translations[context] ?
-            translations.default[text] :
+          let toPrint = translations[context] ?
+            translations[context][text] :
             translations[text]
-          return toPrint || text
+
+          if ( Array.isArray(vars) ) {
+            vars.map( (item) => {
+              toPrint = toPrint.replace(/\${.*}/, item)
+            })
+          } else if ( vars ) {
+            Object.keys(vars).map((item) => {
+              toPrint = toPrint.replace(`\${${item}}`, vars[item])
+            })
+          }
+          return `${pre}${toPrint || text}${suf}`
         } }
       </I18.Consumer>
     )
