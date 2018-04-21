@@ -2,13 +2,11 @@ import React from 'react'
 
 import { I18 } from './Context'
 
-const obj = {}
-
 const withLanguage = (json) => (Component) => {
   return class extends React.Component {
 
    public state = {
-        translations: json || obj,
+        translations: json,
     }
 
     public render() {

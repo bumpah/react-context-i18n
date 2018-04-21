@@ -1,5 +1,4 @@
-
-const main = (langCode = 'en') => (
+const main = (langCode: string): object => (
   langCode !== 'en' ?
   require(`./${langCode}.json`)
   : {}

@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Translate your React APP with with use of new Context API ^^",
   "main": "lib/react-translate.js",
+  "files": [
+    "lib"
+  ],
   "author": "bumpah",
   "license": "MIT",
   "peerDependencies": {
@@ -49,6 +52,7 @@
   },
   "jest": {
     "verbose": true,
+    "collectCoverage": true,
     "transform": {
       ".(ts|tsx)": "babel-jest"
     },

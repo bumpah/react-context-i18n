@@ -127,4 +127,13 @@ describe('<Translate />', () => {
     expect(tree.toJSON().children[0]).toEqual('prefixnimisuffix')
   })
 
+  it('Should catch on error and return `null`', () => {
+    const tree = renderer.create(<Trans />)
+    const {root} = tree
+    const {instance} = root
+    instance.componentDidCatch()
+
+    expect(tree.toJSON()).toBe(null)
+  })
+
 })
