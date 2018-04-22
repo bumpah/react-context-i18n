@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { storiesOf } from '@storybook/react';
 
-import Trans from '../src'
+import Trans from '../src/Consumer'
 import withProvide from '../src/Provider'
 
 import getJson from '../translations'

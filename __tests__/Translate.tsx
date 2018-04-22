@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Trans from '../src'
+import Trans from '../src/Consumer'
 import withProvide from '../src/Provider'
 
 import getTrans from '../translations'

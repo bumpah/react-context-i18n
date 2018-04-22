@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { I18 } from './Context'
+import I18 from './Context'
 
-const withLanguage = (json) => (Component) => {
+export const withLanguage = (json) => (Component) => {
   return class extends React.Component {
 
    public state = {

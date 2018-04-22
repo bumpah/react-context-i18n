@@ -1,4 +1,6 @@
 node_modules
-lib
 .depc
 yarn-error.log
+yarn.lock
+coverage
+storybook-static

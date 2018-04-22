@@ -1,5 +1,5 @@
 import React from 'react'
-import { I18 } from './Context'
+import I18 from './Context'
 
 interface Props {
   text?: string
@@ -20,7 +20,7 @@ interface Context {
   translations: { default?: {} }
 }
 
-class ReactTranslate extends React.Component<Props> {
+export class ReactTranslate extends React.Component<Props> {
   protected static defaultProps = {
     vars: null,
     variables: null,
