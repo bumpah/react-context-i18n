@@ -3,7 +3,8 @@
     "name": "nimi",
     "car": "auto",
     "cars": "autot",
-    "name ${username}": "nimi ${username}"
+    "name ${username}": "nimi ${username}",
+    "name %s": "nimi %s"
   },
   "reservation": {
     "name": "varauksen nimi",

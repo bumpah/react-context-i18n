@@ -75,6 +75,17 @@ describe('<Translate />', () => {
     expect(tree.toJSON().children[0]).toEqual('nimi mikko')
   })
 
+  it('Should inject variables as array with customPlaceholder option', () => {
+    const Wrapper = () => (
+      <div>
+        <Trans text="name %s" vars={['mikko']} customPlaceholder="%s" />
+      </div>
+    )
+    const Component = withProvide(getTrans('fi'))(Wrapper)
+    const tree = renderer.create(<Component />)
+    expect(tree.toJSON().children[0]).toEqual('nimi mikko')
+  })
+
   it('Should inject variables as object', () => {
     const Wrapper = () => (
       <div>
