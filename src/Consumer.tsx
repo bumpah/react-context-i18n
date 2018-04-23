@@ -40,14 +40,11 @@ export class ReactTranslate extends React.Component<Props> {
     let text: string = this.props.text || this.props.children
     const context = this.props.context || 'default'
 
-    const { vars, variables } = this.props
-    let injectables = []
-    if ( Array.isArray(vars) ) {
-      injectables = [...vars]
+    let { vars } = this.props
+    if( !vars ){
+      vars = this.props.variables
     }
-    if ( Array.isArray(variables) ) {
-      injectables = [...injectables, ...variables]
-    }
+
     const pre = this.props.p || this.props.pre || this.props.prefix || ''
     const suf = this.props.s || this.props.suf || this.props.suffix || ''
     if ( this.props.plural ) {
@@ -62,15 +59,15 @@ export class ReactTranslate extends React.Component<Props> {
             translations[context][text] :
             translations[text]) || text
 
-          if ( Array.isArray(injectables) ) {
+          if ( Array.isArray(vars) ) {
             const match = this.props.customPlaceholder ? this.props.customPlaceholder : /\${.*}/
-            injectables.map( (item) => {
+            vars.map( (item) => {
               toPrint = toPrint.replace(match, item)
             })
-          } else if ( injectables ) {
-            Object.keys(injectables).map((item) => {
+          } else if ( vars ) {
+            Object.keys(vars).map((item) => {
               const match = this.props.customPlaceholder ? this.props.customPlaceholder : `\${${item}}`
-              toPrint = toPrint.replace(match, injectables[item])
+              toPrint = toPrint.replace(match, vars[item])
             })
           }
 
