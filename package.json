@@ -1,5 +1,5 @@
 {
-  "name": "react-context-i18",
+  "name": "react-context-i18n",
   "version": "0.0.1",
   "description": "Translate your React APP with with use of new Context API ^^",
   "main": "lib/index.js",
