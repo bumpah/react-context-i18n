@@ -1,0 +1,10 @@
+node_modules
+.depc
+yarn-error.log
+yarn.lock
+coverage
+storybook-static
+.storybook
+.vscode
+stories
+translations
