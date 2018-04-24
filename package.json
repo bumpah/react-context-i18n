@@ -8,15 +8,26 @@
   "peerDependencies": {
     "react": "^16.3.0"
   },
-  "resolution": {
-    "babel-core": "^7.0.0-bridge.0"
-  },
+  "keywords": [
+    "gettext",
+    "i18n",
+    "internationalization",
+    "react",
+    "react context",
+    "react context api",
+    "react native",
+    "reactjs",
+    "translation"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bumpah/react-context-i18"
+    "url": "https://github.com/bumpah/react-context-i18n"
   },
   "bugs": {
-    "url": "https://github.com/bumpah/react-context-i18/issues"
+    "url": "https://github.com/bumpah/react-context-i18n/issues"
+  },
+  "resolution": {
+    "babel-core": "^7.0.0-bridge.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.44",
@@ -37,6 +48,7 @@
     "@types/storybook__react": "^3.0.7",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^22.4.3",
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -47,7 +59,7 @@
     "typescript": "^2.8.3"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "type-check": "tsc --noEmit --pretty",
     "lint": "tslint -c tslint.json --project tsconfig.json",
@@ -55,7 +67,8 @@
     "build": "babel src --out-dir lib --source-map --extensions '.ts,.tsx'",
     "watch": "babel src/index.ts -o lib/index.js -w --extensions '.ts,.tsx'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "jest": {
     "verbose": true,
@@ -75,7 +88,10 @@
       "<rootDir>/node_modules",
       "<rootDir>/src"
     ],
-    "testRegex": "/__tests__/.*\\.(js|jsx|ts|tsx)$"
+    "testRegex": "/__tests__/.*\\.(js|jsx|ts|tsx)$",
+    "collectCoverageFrom": [
+      "src/*.tsx"
+    ]
   },
   "dependencies": {}
 }
