@@ -1,7 +1,7 @@
 import React from 'react'
 import I18 from './Context'
 
-interface Props {
+export interface Props {
   text?: string
   t?: string
   s?: string,
@@ -41,7 +41,7 @@ export class ReactTranslate extends React.Component<Props> {
     const context = this.props.context || 'default'
 
     let { vars } = this.props
-    if( !vars ){
+    if ( !vars ) {
       vars = this.props.variables
     }
 

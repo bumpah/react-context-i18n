@@ -68,7 +68,8 @@
     "watch": "babel src/index.ts -o lib/index.js -w --extensions '.ts,.tsx'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "prepublish": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "jest": {
     "verbose": true,
