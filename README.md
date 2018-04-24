@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/bumpah/react-context-i18n.svg?branch=master)](https://travis-ci.org/bumpah/react-context-i18n) [![Coverage Status](https://coveralls.io/repos/github/bumpah/react-context-i18n/badge.svg)](https://coveralls.io/github/bumpah/react-context-i18n)
 
 ### Uses new React Context API so requires use of React version >=16.3.0
-React translation component inspired by react-gettext component
+React translation component inspired by react-gettext component.
+Only uses React as peer dependency and no other dependencies
 
 
 ## Basic use
