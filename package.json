@@ -94,5 +94,7 @@
       "src/*.tsx"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.0.0"
+  }
 }

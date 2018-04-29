@@ -8,7 +8,7 @@ export interface Props {
 const getFile = (filename: string) => require('./' + filename)
 
 // const compileJson = (array: Props): object => {
-function compileJson(array: Array<Props>) {
+function compileJson(array: Props[]) {
   const keepTrack: {
     defaulted: boolean,
   } = {
