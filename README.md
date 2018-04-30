@@ -1,4 +1,4 @@
-# react-context-i18
+# react-context-i18n
 
 [![Build Status](https://travis-ci.org/bumpah/react-context-i18n.svg?branch=master)](https://travis-ci.org/bumpah/react-context-i18n) [![Coverage Status](https://coveralls.io/repos/github/bumpah/react-context-i18n/badge.svg)](https://coveralls.io/github/bumpah/react-context-i18n) [![devDependencies Status](https://david-dm.org/bumpah/react-context-i18n/dev-status.svg)](https://david-dm.org/bumpah/react-context-i18n?type=dev)
 
@@ -14,6 +14,20 @@ Component exposes `ConsumeLanguage` & `withLanguageContext`
 ConsumeLanguage is React Component which does translation
 
 withLanguageContext is Funtion HOC which provides translation Context
+
+
+- 0.0.3
+
+There is now also new `makeDictionary` -function exposed which takes Array with formed as 
+
+```
+const dicJson = [
+  { json: getTrans('fi')},
+  { json: getTrans('fi-pay'), context: 'pay'},
+]
+```
+
+and returns JSON Object which can be consumed by `withLanguageContext` -function.
 
 
 ### example default usage
