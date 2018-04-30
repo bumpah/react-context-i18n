@@ -22,8 +22,8 @@ There is now also new `makeDictionary` -function exposed which takes Array with 
 
 ```
 const dicJson = [
-  { json: getTrans('fi')},
-  { json: getTrans('fi-pay'), context: 'pay'},
+  { json: { someting: 'to convert' } },
+  { json: { someting: 'else to convert' } , context: 'pay'},
 ]
 ```
 
