@@ -89,7 +89,7 @@ describe('<Translate />', () => {
   it('Should inject variables as object', () => {
     const Wrapper = () => (
       <div>
-        <Trans text="name ${username}" vars={{username: 'mikko'}} />
+        <Trans text="name ${username}" vars={{ username: 'mikko' }} />
       </div>
     )
     const Component = withProvide(getTrans('fi'))(Wrapper)
@@ -100,7 +100,7 @@ describe('<Translate />', () => {
   it('Should inject variables as object as well in context', () => {
     const Wrapper = () => (
       <div>
-        <Trans text="name ${username}" vars={{username: 'mikko'}} context="reservation" />
+        <Trans text="name ${username}" vars={{ username: 'mikko' }} context="reservation" />
       </div>
     )
     const Component = withProvide(getTrans('fi'))(Wrapper)
@@ -140,8 +140,8 @@ describe('<Translate />', () => {
 
   it('Should catch on error and return `null`', () => {
     const tree = renderer.create(<Trans />)
-    const {root} = tree
-    const {instance} = root
+    const { root } = tree
+    const { instance } = root
     instance.componentDidCatch()
 
     expect(tree.toJSON()).toBe(null)

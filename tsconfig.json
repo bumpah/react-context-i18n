@@ -7,7 +7,12 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "importHelpers": true,
-    "lib": ["dom", "es2015", "es2016", "es2017"],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
     "listEmittedFiles": true,
     "module": "es6",
     "moduleResolution": "node",
@@ -18,8 +23,17 @@
     "removeComments": false,
     "rootDir": "src",
     "skipLibCheck": true,
+    "strictNullChecks": true,
     "target": "es6",
   },
-  "include": ["typings/*.d.ts","./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["node_modules", "dist", "data"]
+  "include": [
+    "typings/*.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "data"
+  ]
 }

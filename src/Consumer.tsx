@@ -13,8 +13,8 @@ export interface Props {
   children?: string
   context?: string
   count?: number
-  vars?: Array<string|number> | object
-  variables?: Array<string|number> | object
+  vars?: Array<string | number> | object
+  variables?: Array<string | number> | object
   plural?: string[]
   customPlaceholder?: string
 }
@@ -34,45 +34,45 @@ export class ReactTranslate extends React.Component<Props> {
   }
 
   public render() {
-    if ( this.state.catched ) {
+    if (this.state.catched) {
       return null
     }
-    let text: string = this.props.text || this.props.children
-    const context = this.props.context || 'default'
+    let text: string = this.props.text || this.props.children || ''
+    const context = this.props.context || 'default'
 
     let { vars } = this.props
-    if ( !vars ) {
+    if (!vars) {
       vars = this.props.variables
     }
 
-    const pre = this.props.p || this.props.pre || this.props.prefix || ''
-    const suf = this.props.s || this.props.suf || this.props.suffix || ''
-    if ( this.props.plural ) {
+    const pre = this.props.p || this.props.pre || this.props.prefix || ''
+    const suf = this.props.s || this.props.suf || this.props.suffix || ''
+    if (this.props.plural && typeof this.props.count !== 'undefined') {
       text = this.props.plural[this.props.count]
     }
 
     return (
       <I18.Consumer>
-        { (trans: Context) => {
+        {(trans: Context) => {
           const { translations } = trans
           let toPrint = (translations[context] ?
             translations[context][text] :
-            translations[text]) || text
+            translations[text]) || text
 
-          if ( Array.isArray(vars) ) {
+          if (Array.isArray(vars)) {
             const match = this.props.customPlaceholder ? this.props.customPlaceholder : /\${.*}/
-            vars.map( (item) => {
+            vars.map((item) => {
               toPrint = toPrint.replace(match, item)
             })
-          } else if ( vars ) {
+          } else if (vars) {
             Object.keys(vars).map((item) => {
               const match = this.props.customPlaceholder ? this.props.customPlaceholder : `\${${item}}`
               toPrint = toPrint.replace(match, vars[item])
             })
           }
 
-          return `${pre}${toPrint || text}${suf}`
-        } }
+          return `${pre}${toPrint || text}${suf}`
+        }}
       </I18.Consumer>
     )
   }
