@@ -5,6 +5,8 @@ export interface Props {
   context?: string,
 }
 
+const getFile = (filename: string) => require('./' + filename)
+
 // const compileJson = (array: Props): object => {
 function compileJson(array: Props[]) {
   const keepTrack: {
@@ -17,7 +19,7 @@ function compileJson(array: Props[]) {
     if ( !cur.context && keepTrack.defaulted ) { return acc }
     if ( !cur.context && cur.file ) {
       keepTrack.defaulted = true
-      const def: {} = require(cur.file)
+      const def: {} = getFile(cur.file)
       return {  ...acc, default: def }
     }
     if ( cur.json ) {
@@ -25,7 +27,7 @@ function compileJson(array: Props[]) {
         { ...acc, [cur.context]: cur.json } :
         { ...acc, default: cur.json }
     }
-    return { ...acc, [cur.context]: {...require(cur.file)}}
+    return { ...acc, [cur.context]: {...getFile(cur.file)}}
   }, {})
 
   return json
