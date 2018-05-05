@@ -1,6 +1,6 @@
 {
   "name": "react-context-i18n",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Translate your React APP with with use of new Context API ^^",
   "main": "lib/index.js",
   "author": "bumpah",
