@@ -1,3 +1,7 @@
+### 0.1.0
+
+Inject JSX and translations inside translatable string with `vars`
+
 ### 0.0.5
 
 Fix for webpack build warning message
