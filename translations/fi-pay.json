@@ -1,6 +1,4 @@
 {
-  "pay": {
-    "payment card": "maksukortti",
-    "proceed": "seuraava"
-  }
+  "payment card": "maksukortti",
+  "proceed": "seuraava"
 }

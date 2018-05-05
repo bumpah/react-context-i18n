@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Translate /> Should catch on error and return \`null\` 1`] = `
+<div>
+  
+  name 
+  <b>
+    'its me'
+  </b>
+  , link 
+  <a
+    href="#"
+  >
+    asd
+  </a>
+  .
+  
+</div>
+`;
