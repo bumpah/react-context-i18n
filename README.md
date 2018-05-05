@@ -7,6 +7,26 @@ React translation component inspired by react-gettext component.
 Only uses React as peer dependency and no other dependencies
 
 
+
+### NEW FEATURES
+
+Inject JSX and translations inside translatable content
+
+```
+// Example dictionary
+const json = {
+  'Click link': 'press me',
+  'Trans me!': 'im a link',
+}
+
+<I18 vars={[
+  () => <a href="#"><I18 t="Trans me!"/></a>
+]}>Click link ${link}</I18>
+
+// => `press me <a href="#">im a link</a>
+```
+
+
 ## Basic use
 
 Component exposes `ConsumeLanguage` & `withLanguageContext`
@@ -14,20 +34,6 @@ Component exposes `ConsumeLanguage` & `withLanguageContext`
 ConsumeLanguage is React Component which does translation
 
 withLanguageContext is Funtion HOC which provides translation Context
-
-
-- 0.0.3
-
-There is now also new `makeDictionary` -function exposed which takes Array with formed as 
-
-```
-const dicJson = [
-  { json: { someting: 'to convert' } },
-  { json: { someting: 'else to convert' } , context: 'pay'},
-]
-```
-
-and returns JSON Object which can be consumed by `withLanguageContext` -function.
 
 
 ### example default usage
@@ -121,3 +127,17 @@ const Wrapper = () => (
   }
 }
 ```
+
+- 0.0.3
+
+There is now also new `makeDictionary` -function exposed which takes Array with formed as 
+
+```
+const dicJson = [
+  { json: { someting: 'to convert' } },
+  { json: { someting: 'else to convert' } , context: 'pay'},
+]
+```
+
+and returns JSON Object which can be consumed by `withLanguageContext` -function.
+
