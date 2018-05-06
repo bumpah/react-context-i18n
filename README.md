@@ -1,6 +1,10 @@
 # react-context-i18n
 
-[![Build Status](https://travis-ci.org/bumpah/react-context-i18n.svg?branch=master)](https://travis-ci.org/bumpah/react-context-i18n) [![Coverage Status](https://coveralls.io/repos/github/bumpah/react-context-i18n/badge.svg)](https://coveralls.io/github/bumpah/react-context-i18n) [![devDependencies Status](https://david-dm.org/bumpah/react-context-i18n/dev-status.svg)](https://david-dm.org/bumpah/react-context-i18n?type=dev)
+[![Build Status](https://travis-ci.org/bumpah/react-context-i18n.svg?branch=master)](https://travis-ci.org/bumpah/react-context-i18n) 
+
+[![Coverage Status](https://coveralls.io/repos/github/bumpah/react-context-i18n/badge.svg?branch=master)](https://coveralls.io/github/bumpah/react-context-i18n?branch=master)
+
+[![devDependencies Status](https://david-dm.org/bumpah/react-context-i18n/dev-status.svg)](https://david-dm.org/bumpah/react-context-i18n?type=dev)
 
 ### Uses new React Context API so requires use of React version >=16.3.0
 React translation component inspired by react-gettext component.
