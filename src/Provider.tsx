@@ -1,12 +1,10 @@
 import React from 'react'
-
 import I18 from './Context'
 
-export const withLanguage = (json) => (Component) => {
+export const withLanguageContext = (json: {}) => (Component) => {
   return class extends React.Component {
-
-   public state = {
-        translations: json,
+    public state = {
+      translations: json,
     }
 
     public render() {
@@ -19,4 +17,4 @@ export const withLanguage = (json) => (Component) => {
   }
 }
 
-export default withLanguage
+export default withLanguageContext

@@ -23,7 +23,7 @@ interface Context {
   translations: { default?: {} }
 }
 
-export class ReactTranslate extends React.Component<Props> {
+export class ConsumeLanguage extends React.Component<Props> {
   protected static defaultProps = {
     vars: null,
     variables: null,
@@ -121,4 +121,4 @@ function fill(val) {
   return <Fragment key={JSON.stringify(val)}>{val}</Fragment>
 }
 
-export default ReactTranslate
+export default ConsumeLanguage

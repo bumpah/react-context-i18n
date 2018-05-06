@@ -1,6 +1,10 @@
 import React from 'react'
 
-const DefaultLangContext = {
+export interface LanguageContext {
+  translations: {}
+}
+
+const DefaultLangContext: LanguageContext = {
   translations: {},
 }
 

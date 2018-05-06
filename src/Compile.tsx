@@ -1,5 +1,5 @@
 
-export interface Props {
+export interface DictionaryProps {
   file?: string,
   json?: {},
   context?: string,
@@ -8,10 +8,10 @@ export interface Props {
 const getFile = (filename: string) => require('./' + filename)
 
 // const compileJson = (array: Props): object => {
-function compileJson(array: Props[]) {
+export function makeDictionary(array: DictionaryProps[]) {
   let defaulted: boolean = false
 
-  const json: {} = array.reduce((acc: {}, cur: Props): {} => {
+  const json: {} = array.reduce((acc: {}, cur: DictionaryProps): {} => {
 
     if (!cur.context && defaulted) {
       return acc
@@ -35,4 +35,4 @@ function compileJson(array: Props[]) {
   return json
 }
 
-export default compileJson
+export default makeDictionary

@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "declaration": true,
-    "experimentalDecorators": true,
     "jsx": "react",
     "importHelpers": true,
     "lib": [
@@ -13,27 +11,18 @@
       "es2016",
       "es2017"
     ],
-    "listEmittedFiles": true,
-    "module": "es6",
+    "sourceMap": true,
+    "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "noEmit": true,
-    "outDir": "lib",
+    "outDir": "lib/",
     "pretty": true,
-    "removeComments": false,
+    "removeComments": true,
     "rootDir": "src",
     "skipLibCheck": true,
-    "strictNullChecks": true,
     "target": "es6",
   },
   "include": [
-    "typings/*.d.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "data"
+    "src"
   ]
 }
