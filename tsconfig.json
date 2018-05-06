@@ -20,6 +20,7 @@
     "rootDir": "src",
     "skipLibCheck": true,
     "target": "es6",
+    "emitDeclarationOnly": true
   },
   "include": [
     "src"
