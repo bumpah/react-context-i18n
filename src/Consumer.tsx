@@ -118,7 +118,13 @@ export class ConsumeLanguage extends React.Component<Props> {
 }
 
 function fill(val) {
-  return <Fragment key={JSON.stringify(val)}>{val}</Fragment>
+  let key: string
+  try {
+    key = JSON.stringify(val)
+  } catch (error) {
+    key = JSON.stringify(val.props)
+  }
+  return <Fragment key={key}>{val}</Fragment>
 }
 
 export default ConsumeLanguage

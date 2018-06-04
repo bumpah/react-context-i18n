@@ -174,10 +174,9 @@ describe('<Translate />', () => {
     const Wrapper = () => (
       <div>
         <Trans
-          text="name ${username}, link ${link}."
+          text="name ${username}"
           vars={[
             () => <Trans text="name" />,
-            () => <a href="#"><Trans text="name" /></a>,
           ]}
         />
       </div>
@@ -186,7 +185,6 @@ describe('<Translate />', () => {
     const tree = renderer.create(<Component />).toJSON()
 
     expect(tree.children).toContain('nimi')
-    expect(tree.children[6].children).toContain('nimi')
   })
 
   /**
