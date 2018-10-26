@@ -1,20 +1,14 @@
-import React from 'react'
+import React, { memo } from 'react'
 import I18 from './Context'
 
-export const withLanguageContext = (json: {}) => (Component) => {
-  return class extends React.Component {
-    public state = {
-      translations: json,
-    }
-
-    public render() {
-      return (
-        <I18.Provider value={this.state}>
-          <Component {...this.props} />
-        </I18.Provider>
-      )
-    }
-  }
+export function withLanguageContext(translations) {
+  return (Component) => memo((props) => {
+    return (
+      <I18.Provider value={{ translations }}>
+        <Component {...props} />
+      </I18.Provider>
+    )
+  })
 }
 
 export default withLanguageContext

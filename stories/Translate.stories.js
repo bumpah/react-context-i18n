@@ -1,33 +1,32 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react'
 
-import Trans from '../lib/Consumer';
-import withProvide from '../lib/Provider';
+import Trans from '../lib/Consumer'
+import withProvide from '../lib/Provider'
 
-import getJson from '../translations';
+import getTrans from '../translations'
 
 const Wrapper = () => (
   <div>
     <Trans text="name" />
   </div>
-);
-const Comp = withProvide(getJson('fi'))(Wrapper);
+)
+const Comp = withProvide(getTrans('fi'))(Wrapper)
 
 const WrapperWithVar = () => (
   <div>
     <Trans
-      text="name ${username}, link ${link}."
+      text="name ${username}"
       vars={[
-        () => <b>'its me'</b>,
-        () => <a href="#"><Trans text="cars" /></a>,
+        () => <Trans text="name" />,
       ]}
     />
   </div>
-);
-const CompVars = withProvide(getJson('fi'))(WrapperWithVar);
+)
+const CompVars = withProvide(getTrans('fi'))(WrapperWithVar)
 
 storiesOf('Translation', module)
   .add('No translation {text=name}', () => <Trans text="name" />)
   .add('Translate to Finnish {text=name}', () => <Comp />)
-  .add('Inject var as JSX', () => <CompVars />);
+  .add('Inject var as JSX', () => <CompVars />)

@@ -1,9 +1,11 @@
 {
+  "defaultSeverity": "error",
   "extends": [
-    "tslint:recommended",
+    "tslint:latest",
     "tslint-react"
   ],
   "jsRules": {
+    "semicolon": false,
     "quotemark": [
       true,
       "single",
@@ -11,14 +13,16 @@
     ]
   },
   "rules": {
+    "interface-name": false,
     "semicolon": false,
     "quotemark": [
       true,
       "single",
       "jsx-double"
     ],
-    "interface-name": false,
-    "jsx-no-multiline-js": false,
-    "object-literal-sort-keys": false
-  }
+    "jsx-no-multiline-js": false
+  },
+  "rulesDirectory": [
+    "typings"
+  ]
 }

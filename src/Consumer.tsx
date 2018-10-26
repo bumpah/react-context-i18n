@@ -23,10 +23,14 @@ interface Context {
   translations: { default?: {} }
 }
 
+/**
+ * RE-WRITE TO USE
+ * =>> React.js -hooks
+ */
 export class ConsumeLanguage extends React.Component<Props> {
   protected static defaultProps = {
-    vars: null,
     variables: null,
+    vars: null,
   }
 
   public state = {
