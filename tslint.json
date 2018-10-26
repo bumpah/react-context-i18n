@@ -3,10 +3,14 @@
     "tslint:recommended",
     "tslint-react"
   ],
+  "jsRules": {
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ]
+  },
   "rules": {
-    "max-classes-per-file": [
-      false
-    ],
     "semicolon": false,
     "quotemark": [
       true,

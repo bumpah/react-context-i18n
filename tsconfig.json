@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "declaration": true,
     "jsx": "react",
     "importHelpers": true,
     "lib": [
       "dom",
-      "es2015",
-      "es2016",
-      "es2017"
+      "esnext"
     ],
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "outDir": "lib/",
+    "outDir": "./lib",
     "pretty": true,
     "removeComments": true,
-    "rootDir": "src",
-    "skipLibCheck": true,
-    "target": "es6",
-    "emitDeclarationOnly": true
+    "rootDir": "./src",
+    "target": "esnext",
+    "types": [
+      "react",
+      "jest"
+    ]
   },
   "include": [
     "src"

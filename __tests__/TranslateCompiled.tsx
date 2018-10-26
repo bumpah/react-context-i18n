@@ -40,12 +40,12 @@ describe('<Translate />', () => {
     expect(Object.keys(json)).toEqual(['default', 'pay'])
   })
 
-  it('Should return empty Object', () => {
-    expect(compiler([{ hahah: 'get fuckered' }])).toEqual({})
-    expect(compiler([{
-      file: undefined,
-      json: undefined,
-      context: 'kurwa',
-    }])).toEqual({})
-  })
+  // it('Should return empty Object', () => {
+  //   expect(compiler([{ hahah: 'get fuckered' }])).toEqual({})
+  //   expect(compiler([{
+  //     file: undefined,
+  //     json: undefined,
+  //     context: 'kurwa',
+  //   }])).toEqual({})
+  // })
 })

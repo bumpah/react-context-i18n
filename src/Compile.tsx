@@ -1,11 +1,8 @@
-
 export interface DictionaryProps {
-  file?: string,
   json?: {},
+  file?: {},
   context?: string,
 }
-
-const getFile = (filename: string) => require('./' + filename)
 
 // const compileJson = (array: Props): object => {
 export function makeDictionary(array: DictionaryProps[]) {
@@ -19,13 +16,14 @@ export function makeDictionary(array: DictionaryProps[]) {
 
     if (!cur.context) {
       defaulted = true
-      const def: {} = cur.file ? getFile(cur.file) : cur.json
+      const def: {} = cur.json
       return { ...acc, default: def }
     }
 
     if (cur.file) {
-      return { ...acc, [cur.context]: { ...getFile(cur.file) } }
+      return { ...acc, [cur.context]: (cur.file) }
     }
+
     if (cur.json) {
       return { ...acc, [cur.context]: (cur.json) }
     }
