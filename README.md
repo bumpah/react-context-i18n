@@ -1,3 +1,8 @@
+### TO NOTE
+
+Version 0.2.0 of library uses `React.js@16.7.0` new hooks implementation and therefore requires this version of React to be used.
+
+
 # react-context-i18n
 
 [![Build Status](https://travis-ci.org/bumpah/react-context-i18n.svg?branch=master)](https://travis-ci.org/bumpah/react-context-i18n) [![Coverage Status](https://coveralls.io/repos/github/bumpah/react-context-i18n/badge.svg?branch=master)](https://coveralls.io/github/bumpah/react-context-i18n?branch=master) [![devDependencies Status](https://david-dm.org/bumpah/react-context-i18n/dev-status.svg)](https://david-dm.org/bumpah/react-context-i18n?type=dev)
