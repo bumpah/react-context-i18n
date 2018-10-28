@@ -1,6 +1,6 @@
 ### TO NOTE
 
-Version 0.2.0 of library uses `React.js@16.7.0` new hooks implementation and therefore requires this version of React to be used.
+Version `0.2.0` of library uses `React.js@16.7.0` new hooks implementation and therefore requires this version of React to be used.
 
 
 # react-context-i18n
