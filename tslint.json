@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "error",
+  // "defaultSeverity": "error",
   "extends": [
     "tslint:latest",
     "tslint-react"
@@ -21,8 +21,5 @@
       "jsx-double"
     ],
     "jsx-no-multiline-js": false
-  },
-  "rulesDirectory": [
-    "typings"
-  ]
+  }
 }

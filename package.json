@@ -56,16 +56,16 @@
     "@storybook/addon-links": "next",
     "@storybook/addons": "next",
     "@storybook/react": "next",
-    "@types/jest": "^23.3.7",
+    "@types/jest": "^23.3.8",
     "@types/react": "next",
     "@types/react-dom": "next",
-    "@types/react-test-renderer": "^16.0.3",
+    "@types/react-test-renderer": "next",
     "@types/storybook__react": "^3.0.9",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "next",
     "babel-loader": "^8.0.4",
     "coveralls": "^3.0.2",
-    "jest": "^23.6.0",
+    "jest": "next",
     "react-test-renderer": "next",
     "tslib": "^1.9.3",
     "tslint": "^5.11.0",
@@ -94,7 +94,7 @@
       "<rootDir>/node_modules",
       "<rootDir>/src"
     ],
-    "testRegex": "/__tests__/.*\\.(js|jsx|ts|tsx)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
     "collectCoverageFrom": [
       "src/*.tsx"
     ]
