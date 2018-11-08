@@ -1,7 +1,7 @@
 ### TO NOTE
 
 Version `0.2.0` of library uses `React.js@16.7.0` new hooks implementation and therefore requires verson `^16.7.0-aplha.0` or latter of React to be used. 
-### IF YOU WAN'T TO CONTINUE TO USE THIS LIBRARY WITH >=16.3 VERSION OF REACT, LOCK YOUR VERSION TO 0.1.6 OF THIS PACKAGE
+> IF YOU WAN'T TO CONTINUE TO USE THIS LIBRARY WITH >=16.3 VERSION OF REACT, USE VERSION `0.1.6` OF THIS PACKAGE
 
 
 # react-context-i18n
