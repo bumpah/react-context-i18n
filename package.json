@@ -2,9 +2,11 @@
   "name": "react-context-i18n",
   "version": "0.2.1",
   "description": "Translate your React APP with with use of new Context API ^^",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
+  "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
   "files": [
+    "dist/",
     "lib/",
     "LICENSE",
     "README.md"
@@ -35,14 +37,18 @@
   "scripts": {
     "test": "yarn jest --coverage",
     "test:watch": "yarn jest --watch",
-    "clean": "rm -rf ./lib",
+    "clean": "yarn clean:es && yarn clean:umd",
+    "clean:es": "rm -rf ./lib",
+    "clean:umd": "rm -rf ./dist",
     "lint": "tslint --project tsconfig.json",
-    "build": "yarn clean && yarn tsc",
-    "watch": "yarn clean && yarn tsc --watch --pretty",
+    "build": "yarn build:es && yarn build:umd",
+    "build:es": "yarn tsc",
+    "build:umd": "yarn tsc -p tsconfig.cjs.json",
+    "watch": "yarn tsc --watch --pretty",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "pub": "yarn clean && yarn lint && yarn test && yarn build"
+    "pub": "yarn clean && yarn lint && yarn test && yarn build "
   },
   "resolution": {
     "babel-core": "^7.0.0-bridge.0"
