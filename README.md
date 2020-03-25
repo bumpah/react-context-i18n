@@ -147,3 +147,46 @@ const dicJson = [
 
 and returns JSON Object which can be consumed by `withLanguageContext` -function.
 
+
+## Example of using state to toggle translations json https://codesandbox.io/s/clever-wood-8jlel
+
+
+```
+import React from "react";
+import "./styles.css";
+import {
+  ConsumeLanguage as I18,
+  withLanguageContext
+} from "react-context-i18n";
+
+const translations = {
+  en: {},
+  fi: {
+    "Hello World!": "Hei Maailma"
+  }
+};
+const languages = Object.keys(translations);
+
+function Wrapper() {
+  const [lang, setLang] = React.useState(languages[0]);
+
+  function switchLanguage() {
+    const toggle = languages.find(item => item !== lang);
+    setLang(toggle);
+  }
+
+  const Comp = withLanguageContext(translations[lang])(App);
+  return <Comp switchLanguage={switchLanguage} lang={lang} />;
+}
+
+function App({ switchLanguage, lang }) {
+  return (
+    <div className="App">
+      <button onClick={switchLanguage}>Switch language: {lang}</button>
+      <I18>Hello World!</I18>
+    </div>
+  );
+}
+
+export default Wrapper;
+```
