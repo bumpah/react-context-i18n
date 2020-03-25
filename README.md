@@ -44,7 +44,7 @@ withLanguageContext is Funtion HOC which provides translation Context
 
 ### example default usage
 ```
-import { ConsumeLanguage as I18, withLanguageContext } from 'react-context-i18'
+import { ConsumeLanguage as I18, withLanguageContext } from 'react-context-i18n'
 
 const translatables = {
   test: 'testi',
