@@ -1,6 +1,9 @@
 ### TO NOTE
 
-Version `0.2.0` of library uses `React.js@16.7.0` new hooks implementation and therefore requires verson `^16.7.0-aplha.0` or latter of React to be used. 
+Starting from version `0.3.0` library is compiled with new JSX-transformations, if this is issue for your project stick with version `^0.2.0`.  
+
+Version `0.2.0` of library uses `React.js@16.7.0` new hooks implementation and therefore requires verson `^16.7.0-aplha.0` or latter of React to be used.  
+
 > IF YOU WAN'T TO CONTINUE TO USE THIS LIBRARY WITH >=16.3 VERSION OF REACT, USE VERSION `0.1.6` OF THIS PACKAGE
 
 
