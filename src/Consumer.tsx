@@ -13,8 +13,8 @@ export interface Props {
   children?: string
   context?: string
   count?: number
-  vars?: Array<string | number | (() => any)> | object
-  variables?: Array<string | number> | object
+  vars?: (string | number | (() => any))[] | object
+  variables?: (string | number)[] | object
   plural?: string[]
   customPlaceholder?: string
 }
