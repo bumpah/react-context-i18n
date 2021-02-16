@@ -3,7 +3,7 @@
   "version": "0.4.0-alpha.0",
   "description": "Translate your React APP with with use of new Context API ^^",
   "main": "./dist/index.js",
-  "module": "./lib/index.mjs",
+  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
     "dist/",
@@ -42,7 +42,7 @@
     "clean:cjs": "rm -rf ./dist",
     "lint": "tslint --project tsconfig.json",
     "build": "yarn build:es",
-    "build:es": "yarn tsc --outDir ./dist",
+    "build:es": "yarn tsc --outDir ./lib",
     "build:cjs": "yarn tsc -m commonjs --outDir ./dist",
     "watch": "yarn tsc --watch --pretty",
     "storybook": "start-storybook -p 6006",
