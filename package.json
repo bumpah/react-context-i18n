@@ -1,6 +1,6 @@
 {
   "name": "react-context-i18n",
-  "version": "0.2.2",
+  "version": "0.4.0-alpha.0",
   "description": "Translate your React APP with with use of new Context API ^^",
   "main": "./dist/index.js",
   "module": "./lib/index.mjs",
