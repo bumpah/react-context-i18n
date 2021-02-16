@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment, Component, ReactNode } from 'react'
 import I18 from './Context'
 
 export interface Props {
@@ -27,7 +27,7 @@ interface Context {
  * RE-WRITE TO USE
  * =>> React.js -hooks
  */
-export class ConsumeLanguage extends React.Component<Props> {
+export class ConsumeLanguage extends Component<Props> {
   protected static defaultProps = {
     variables: null,
     vars: null,
@@ -59,7 +59,7 @@ export class ConsumeLanguage extends React.Component<Props> {
       text = this.props.plural[this.props.count]
     }
 
-    const helper: React.ReactNode[] = []
+    const helper: ReactNode[] = []
     return (
       <I18.Consumer>
         {(trans: Context) => {
