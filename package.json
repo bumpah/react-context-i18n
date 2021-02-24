@@ -41,14 +41,14 @@
     "clean:es": "rm -rf ./lib",
     "clean:cjs": "rm -rf ./dist",
     "lint": "tslint --project tsconfig.json",
-    "build": "yarn build:es",
+    "build": "yarn build:es && yarn build:cjs",
     "build:es": "yarn tsc --outDir ./lib",
     "build:cjs": "yarn tsc -m commonjs --outDir ./dist",
     "watch": "yarn tsc --watch --pretty",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "pub": "yarn clean && yarn lint && yarn test && yarn build "
+    "pub": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "resolution": {
     "babel-core": "^7.0.0-bridge.0"
