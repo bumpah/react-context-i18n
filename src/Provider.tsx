@@ -1,5 +1,5 @@
-import {memo} from 'react'
-import I18 from './Context'
+import { memo } from 'react'
+import { I18 } from './Context'
 
 export function withLanguageContext(translations) {
   return (Component) => memo((props) => {
@@ -10,5 +10,3 @@ export function withLanguageContext(translations) {
     )
   })
 }
-
-export default withLanguageContext

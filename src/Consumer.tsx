@@ -1,7 +1,7 @@
 import { Fragment, Component, ReactNode } from 'react'
-import I18 from './Context'
+import { I18 } from './Context'
 
-export interface Props {
+export interface ConsumerProps {
   text?: string
   t?: string
   s?: string,
@@ -27,7 +27,7 @@ interface Context {
  * RE-WRITE TO USE
  * =>> React.js -hooks
  */
-export class ConsumeLanguage extends Component<Props> {
+export class ConsumeLanguage extends Component<ConsumerProps> {
   protected static defaultProps = {
     variables: null,
     vars: null,
@@ -130,5 +130,3 @@ function fill(val) {
   }
   return <Fragment key={key}>{val}</Fragment>
 }
-
-export default ConsumeLanguage

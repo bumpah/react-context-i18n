@@ -1,16 +1,16 @@
-import React from 'react'
+import * as React from 'react'
 import renderer from 'react-test-renderer'
 
-import compiler from '../src/Compile'
+import { makeDictionary as compiler } from '../src/Compile'
 import getTrans from '../translations'
 
 const dic = [
-  { file: '../translations/fi.json'},
-  { file: '../translations/fi-pay.json', context: 'pay'},
+  { file: '../translations/fi.json' },
+  { file: '../translations/fi-pay.json', context: 'pay' },
 ]
 const dicJson = [
-  { json: getTrans('fi')},
-  { json: getTrans('fi-pay'), context: 'pay'},
+  { json: getTrans('fi') },
+  { json: getTrans('fi-pay'), context: 'pay' },
 ]
 describe('<Compile />', () => {
 

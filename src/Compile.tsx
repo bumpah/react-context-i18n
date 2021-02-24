@@ -24,5 +24,3 @@ export function makeDictionary(array: DictionaryProps[]) {
 
   return json
 }
-
-export default makeDictionary

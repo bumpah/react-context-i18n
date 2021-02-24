@@ -1,8 +1,8 @@
 import * as React from 'react'
 import renderer from 'react-test-renderer'
 
-import Trans from '../src/Consumer'
-import withProvide from '../src/Provider'
+import { ConsumeLanguage as Trans } from '../src/Consumer'
+import { withLanguageContext as withProvide } from '../src/Provider'
 
 import getTrans from '../translations'
 
